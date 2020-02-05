@@ -1,0 +1,14 @@
+comtypes==1.1.7
+Cython==0.29.14
+filelock==3.0.12
+nose==1.3.7
+numpy==1.18.1
+opencv-python==4.1.2.30
+pipdeptree==0.13.2
+pkg-resources==0.0.0
+pygame==1.9.6
+pykinect2==0.1.0
+PyOpenGL==3.1.5
+PyOpenGL-accelerate==3.1.5
+python-pcl==0.3.0a1
+scipy==1.4.1
