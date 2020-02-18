@@ -108,7 +108,7 @@ Twisted==16.0.0
 txaio==1.0.0
 unity-lens-photos==1.0
 wcwidth==0.1.8
-Werkzeug==0.15.2
+Werkzeug==0.15.3
 widgetsnbextension==3.5.1
 wxPython==3.0.2.0
 wxPython-common==3.0.2.0
