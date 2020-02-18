@@ -2,7 +2,7 @@
 
 Current demo visualizes either kinect depth data, or random points for use without kinect.
 
-'S'to save to .pcd  
+'S' to save to .pcd  
 'SPACEBAR' to pause frame  
 Mouse Drag to orbit  
 Mouse Wheel to zoom  
