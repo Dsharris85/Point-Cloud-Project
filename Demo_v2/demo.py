@@ -43,7 +43,7 @@ DATA ascii
         file_name = "PCD/KINECT_CLOUD_{}.pcd".format(time)            
         pcd = open(file_name, "w")
 
-        pcd.write(to_write)
+        pcd.write(header)
         
         rows, cols = self.dep.shape
         count = 0
