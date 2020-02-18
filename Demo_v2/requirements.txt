@@ -104,7 +104,7 @@ tornado==5.1.1
 tqdm==4.42.1
 traitlets==4.3.3
 trollius==2.0.1
-Twisted==16.0.0
+Twisted==19.7.0
 txaio==1.0.0
 unity-lens-photos==1.0
 wcwidth==0.1.8
