@@ -12,3 +12,4 @@ Included a requirements.txt and a dependencies.txt, though I wouldn't install fr
 Use only as a reference if needed
 
 You will have to create a directory 'PCD' in the same directory as main files to be able to save.
+Once saved, you should be able to view .pcd files using viewer from Demo 1
