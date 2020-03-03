@@ -12,7 +12,7 @@ First we need data. We aquire .pcd scans from "get_data.py" where we are able to
 Run script using below syntax, with 'directory_name' being a directory that will be created for the data. Be sure to use this same directory for each script.
 
 ```
-python get_data.py directory_name
+python2 get_data.py directory_name
 ```
 
 ### 2.) Clean Data - Downsample and De-Noise
@@ -24,7 +24,7 @@ Once we have our clouds, we downsample them and try to remove any unwanted noise
 Run script using same syntax as before, keeping the directory name as the same
 
 ```
-python clean_data.py directory_name
+python2 clean_data.py directory_name
 ```
 
 ### 3.) Smooth cloud - Estimate Normals
@@ -35,7 +35,7 @@ Here we try to further clean the data by resampling for a smoother look. This is
 Run script using same syntax as before, keeping the directory name as the same
 
 ```
-python smooth_data.py directory_name
+python3 smooth_data.py directory_name
 ```
 
 ### 4.) Register Clouds - Global registration and ICP Refinement
@@ -46,12 +46,18 @@ At this point we should have at least semi-workable data, and
 Run script using same syntax as before, keeping the directory name as the same
 
 ```
-python combine_data.py directory_name
+python2 combine_data.py directory_name
 ```
 
 ## Some Helpful Open3D links: 
-[General Point Clouds](http://www.open3d.org/docs/release/tutorial/Basic/pointcloud.html) <br/> [Visualization](http://www.open3d.org/docs/release/tutorial/Basic/visualization.html) <br/> [ICP](http://www.open3d.org/docs/release/tutorial/Basic/icp_registration.html) <br/> [Noise Removal](http://www.open3d.org/docs/release/tutorial/Advanced/pointcloud_outlier_removal.html) <br/> [Global Registration](http://www.open3d.org/docs/release/tutorial/Advanced/global_registration.html) <br/> [Multiway Registration](http://www.open3d.org/docs/release/tutorial/Advanced/multiway_registration.html) <br/>
+[General Point Clouds](http://www.open3d.org/docs/release/tutorial/Basic/pointcloud.html) <br/> 
+[Visualization](http://www.open3d.org/docs/release/tutorial/Basic/visualization.html) <br/> 
+[ICP](http://www.open3d.org/docs/release/tutorial/Basic/icp_registration.html) <br/> 
+[Noise Removal](http://www.open3d.org/docs/release/tutorial/Advanced/pointcloud_outlier_removal.html) <br/> 
+[Global Registration](http://www.open3d.org/docs/release/tutorial/Advanced/global_registration.html) <br/> 
+[Multiway Registration](http://www.open3d.org/docs/release/tutorial/Advanced/multiway_registration.html) <br/>
 
+## Folders: 
 In the folder 'Screenshots' there are some images of what i've been able to do so far with this. Definitely needs help but I think this is a good direction to take.
-<br/>
+<br/> <br/>
 The other 'test' folders just contain test data for reference
