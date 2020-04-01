@@ -11,14 +11,16 @@ python viewer.py <dirName> <fileName>
 Only Scripts are uploaded here. Data was uploaded to cloud here: <br/>
 [Here it is](https://mailroosevelt-my.sharepoint.com/:f:/g/personal/dharris36_mail_roosevelt_edu/ErB37MXVl35Ahrh11bWukLoB9OIH3YBIQwgMpU5SfGslkg?e=xtG7bL) <br/> 
 
-## room_data
+### room_data
 Contains random test data obtained from my living room.
-## register_couch
+### register_couch
 All snapshots are of same object for use in registration testing
-## register_table
+### register_table
 All snapshots are of same object for use in registration testing
-## 360
+### 360
 Data obtained from 360 room snapshot rotations taken from center of room, only rotating kinect counter clock-wise
+
+## File Layout
 
 **x_cloud.pcd** <br/>
 Point cloud data format for captured snapshot <br/>
