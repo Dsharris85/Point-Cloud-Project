@@ -1,7 +1,7 @@
 # Test Data
 Data to be used for testing, and the scripts it was obtained from. If you want to run it yourself you'll need the kinect. 
 ```
-python capture.py directory_name
+python capture.py <dirName>
 ```
 
 View saved pcd data using Open3D's viewer using this script:
