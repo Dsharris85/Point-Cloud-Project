@@ -9,7 +9,7 @@ import open3d as o3d
 
 from tqdm import tqdm 
 
-#global counter, counts how many images taken (for naming scheme)
+# global counter, counts how many images taken (for naming scheme)
 total_taken = 1
 
 def get_depth_registered():
