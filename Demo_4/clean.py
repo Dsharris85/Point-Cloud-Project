@@ -46,7 +46,7 @@ def main_clean(d):
         shutil.rmtree("{}/clouds".format(directory))
         os.makedirs("{}/clouds".format(directory))
 
-    print "\nDirectory '{}/clouds' Created \n".format(directory)
+    print("\nDirectory '{}/clouds' Created \n".format(directory))
 
     voxel_s = 0.01
 
@@ -74,5 +74,5 @@ def main_clean(d):
         outlier_cloud.paint_uniform_color([1, 0, 0])
         o3d.visualization.draw_geometries([inlier_cloud, outlier_cloud])
     
-    print "\n\nDone!"
+    print("\n\nDone!")
 
