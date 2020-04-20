@@ -217,4 +217,4 @@ if __name__ == "__main__":
     ui = Ui_PointCloudProject()
     ui.setupUi(PointCloudProject)
     PointCloudProject.show()
-    sys.exit(app.exec_())
+    sys.exit(app.exec_())  
