@@ -22,9 +22,9 @@ class MyDialog(QtWidgets.QDialog):
         # Hide window
         self.hide()
 
-        from capture_test import *
-        main_capture(dirName)
-        
+        # do something until child returns exit call
+        time.sleep(2)
+
         # Re-open UI
         self.open()
 
