@@ -133,7 +133,7 @@ class Ui_PointCloudProject(object):
         self.CaptureData.setText(_translate("PointCloudProject", "Capture Data"))
         self.LoadDirectory.clicked.connect(self.file_open)
         self.Deselect.clicked.connect(self.deselect)
-        self.CaptureData.clicled.connect(self.CaptureDataForm)
+        self.CaptureData.clicked.connect(self.CaptureDataForm)
         
     def file_open(self):
         dirName = QFileDialog.getExistingDirectory()
@@ -145,9 +145,9 @@ class Ui_PointCloudProject(object):
         self.label.setText("Directory Selected: " + dirName)
         self.Deselect.setEnabled(False)
     def CaptureDataForm(self):
-        self.window=QtWidgets.QPointCloudProject()
+        self.window=QtWidgets.QMainWindow()
         self.ui=Ui_MainWindow()
-        self.ui=setupUi(self.window)
+        self.ui.setupUi(self.window)
         PointCloudProject.hide()
         self.window.show()
 
