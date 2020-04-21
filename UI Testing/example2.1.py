@@ -1,7 +1,7 @@
 
-# -*- coding: utf-8 -*-
+    # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'example2.1.UI'
+# Form implementation generated from reading ui file 'example2.1.ui'
 #
 # Created by: PyQt5 UI code generator 5.12.3
 #
@@ -10,11 +10,12 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QFileDialog
+from OtherWindow import Ui_MainWindow
 
 class Ui_PointCloudProject(object):
     def setupUi(self, PointCloudProject):
         PointCloudProject.setObjectName("PointCloudProject")
-        PointCloudProject.resize(380, 311)
+        PointCloudProject.resize(356, 221)
         PointCloudProject.setMaximumSize(QtCore.QSize(16777215, 16777215))
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
@@ -27,7 +28,7 @@ class Ui_PointCloudProject(object):
 "border-bottom-color: rgb(85, 0, 0);\n"
 "border-left-color: rgb(85, 0, 0);")
         self.ViewPointCloud = QtWidgets.QPushButton(PointCloudProject)
-        self.ViewPointCloud.setGeometry(QtCore.QRect(30, 200, 321, 21))
+        self.ViewPointCloud.setGeometry(QtCore.QRect(20, 110, 321, 21))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Maximum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -39,24 +40,12 @@ class Ui_PointCloudProject(object):
         self.ViewPointCloud.setFont(font)
         self.ViewPointCloud.setObjectName("ViewPointCloud")
         self.horizontalLayoutWidget = QtWidgets.QWidget(PointCloudProject)
-        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(20, 140, 341, 51))
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(10, 60, 341, 51))
         self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
         self.horizontalLayout_2.setContentsMargins(9, 9, 9, 9)
         self.horizontalLayout_2.setSpacing(9)
         self.horizontalLayout_2.setObjectName("horizontalLayout_2")
-        self.AutoRegistration = QtWidgets.QPushButton(self.horizontalLayoutWidget)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Maximum)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.AutoRegistration.sizePolicy().hasHeightForWidth())
-        self.AutoRegistration.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("Times New Roman")
-        font.setPointSize(9)
-        self.AutoRegistration.setFont(font)
-        self.AutoRegistration.setObjectName("AutoRegistration")
-        self.horizontalLayout_2.addWidget(self.AutoRegistration)
         self.ManualRegistration = QtWidgets.QPushButton(self.horizontalLayoutWidget)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Maximum)
         sizePolicy.setHorizontalStretch(0)
@@ -69,8 +58,20 @@ class Ui_PointCloudProject(object):
         self.ManualRegistration.setFont(font)
         self.ManualRegistration.setObjectName("ManualRegistration")
         self.horizontalLayout_2.addWidget(self.ManualRegistration)
+        self.AutoRegistration = QtWidgets.QPushButton(self.horizontalLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Maximum)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.AutoRegistration.sizePolicy().hasHeightForWidth())
+        self.AutoRegistration.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(9)
+        self.AutoRegistration.setFont(font)
+        self.AutoRegistration.setObjectName("AutoRegistration")
+        self.horizontalLayout_2.addWidget(self.AutoRegistration)
         self.horizontalLayoutWidget_2 = QtWidgets.QWidget(PointCloudProject)
-        self.horizontalLayoutWidget_2.setGeometry(QtCore.QRect(20, 220, 341, 51))
+        self.horizontalLayoutWidget_2.setGeometry(QtCore.QRect(10, 130, 341, 51))
         self.horizontalLayoutWidget_2.setObjectName("horizontalLayoutWidget_2")
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget_2)
         self.horizontalLayout_3.setContentsMargins(9, 9, 9, 9)
@@ -101,69 +102,21 @@ class Ui_PointCloudProject(object):
         self.Deselect.setObjectName("Deselect")
         self.horizontalLayout_3.addWidget(self.Deselect)
         self.label = QtWidgets.QLabel(PointCloudProject)
-        self.label.setGeometry(QtCore.QRect(30, 280, 321, 16))
+        self.label.setGeometry(QtCore.QRect(20, 190, 321, 16))
         self.label.setObjectName("label")
-        self.groupBox = QtWidgets.QGroupBox(PointCloudProject)
-        self.groupBox.setGeometry(QtCore.QRect(20, 10, 341, 131))
+        self.CaptureData = QtWidgets.QPushButton(PointCloudProject)
+        self.CaptureData.setGeometry(QtCore.QRect(20, 20, 321, 41))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Maximum)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.groupBox.sizePolicy().hasHeightForWidth())
-        self.groupBox.setSizePolicy(sizePolicy)
-        self.groupBox.setAlignment(QtCore.Qt.AlignCenter)
-        self.groupBox.setObjectName("groupBox")
-        self.FromanexistingDirectory = QtWidgets.QPushButton(self.groupBox)
-        self.FromanexistingDirectory.setGeometry(QtCore.QRect(10, 30, 151, 31))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Maximum)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.FromanexistingDirectory.sizePolicy().hasHeightForWidth())
-        self.FromanexistingDirectory.setSizePolicy(sizePolicy)
-        font = QtGui.QFont()
-        font.setFamily("Times New Roman")
-        font.setPointSize(9)
-        self.FromanexistingDirectory.setFont(font)
-        self.FromanexistingDirectory.setObjectName("FromanexistingDirectory")
-        self.plainTextEdit = QtWidgets.QPlainTextEdit(self.groupBox)
-        self.plainTextEdit.setGeometry(QtCore.QRect(10, 90, 271, 31))
-        font = QtGui.QFont()
-        font.setFamily("Times New Roman")
-        font.setPointSize(9)
-        self.plainTextEdit.setFont(font)
-        self.plainTextEdit.setStyleSheet("border-top-color: rgb(85, 0, 0);\n"
-"border-right-color: rgb(85, 0, 0);\n"
-"border-bottom-color: rgb(85, 0, 0);\n"
-"border-left-color: rgb(85, 0, 0);")
-        self.plainTextEdit.setPlainText("")
-        self.plainTextEdit.setObjectName("plainTextEdit")
-        self.label_2 = QtWidgets.QLabel(self.groupBox)
-        self.label_2.setGeometry(QtCore.QRect(20, 70, 161, 20))
-        font = QtGui.QFont()
-        font.setFamily("Times New Roman")
-        font.setPointSize(9)
-        self.label_2.setFont(font)
-        self.label_2.setObjectName("label_2")
-        self.Deselect_2 = QtWidgets.QPushButton(self.groupBox)
-        self.Deselect_2.setGeometry(QtCore.QRect(180, 30, 151, 31))
-        font = QtGui.QFont()
-        font.setFamily("Times New Roman")
-        font.setPointSize(9)
-        self.Deselect_2.setFont(font)
-        self.Deselect_2.setObjectName("Deselect_2")
-        self.commandLinkButton = QtWidgets.QCommandLinkButton(self.groupBox)
-        self.commandLinkButton.setGeometry(QtCore.QRect(290, 90, 31, 31))
-        self.commandLinkButton.setText("")
-        self.commandLinkButton.setObjectName("commandLinkButton")
-        self.plainTextEdit.raise_()
-        self.FromanexistingDirectory.raise_()
-        self.label_2.raise_()
-        self.Deselect_2.raise_()
-        self.commandLinkButton.raise_()
+        sizePolicy.setHeightForWidth(self.CaptureData.sizePolicy().hasHeightForWidth())
+        self.CaptureData.setSizePolicy(sizePolicy)
+        self.CaptureData.setObjectName("CaptureData")
         self.horizontalLayoutWidget.raise_()
         self.horizontalLayoutWidget_2.raise_()
         self.ViewPointCloud.raise_()
         self.label.raise_()
-        self.groupBox.raise_()
+        self.CaptureData.raise_()
 
         self.retranslateUi(PointCloudProject)
         QtCore.QMetaObject.connectSlotsByName(PointCloudProject)
@@ -172,22 +125,16 @@ class Ui_PointCloudProject(object):
         _translate = QtCore.QCoreApplication.translate
         PointCloudProject.setWindowTitle(_translate("PointCloudProject", "Point-Cloud-Project"))
         self.ViewPointCloud.setText(_translate("PointCloudProject", "View Point Cloud"))
-        self.AutoRegistration.setText(_translate("PointCloudProject", "Auto Registration"))
         self.ManualRegistration.setText(_translate("PointCloudProject", "Manual Registration"))
+        self.AutoRegistration.setText(_translate("PointCloudProject", "Auto Registration"))
         self.LoadDirectory.setText(_translate("PointCloudProject", "Load Directory"))
         self.Deselect.setText(_translate("PointCloudProject", "Deselect"))
         self.label.setText(_translate("PointCloudProject", "Directory selected:"))
-        self.groupBox.setTitle(_translate("PointCloudProject", "Capture Data"))
-        self.FromanexistingDirectory.setText(_translate("PointCloudProject", "From an Existing Directory"))
-        self.label_2.setText(_translate("PointCloudProject", "From Entering a Directory Name:"))
-        self.Deselect_2.setText(_translate("PointCloudProject", "Deselect"))
+        self.CaptureData.setText(_translate("PointCloudProject", "Capture Data"))
         self.LoadDirectory.clicked.connect(self.file_open)
         self.Deselect.clicked.connect(self.deselect)
-        self.FromanexistingDirectory.clicked.connect(self.file_open1)
-        self.Deselect_2.clicked.connect(self.deselect1)
-
-
-
+        self.CaptureData.clicled.connect(self.CaptureDataForm)
+        
     def file_open(self):
         dirName = QFileDialog.getExistingDirectory()
         self.label.setText("Directory Selected: " + dirName)
@@ -197,19 +144,14 @@ class Ui_PointCloudProject(object):
         dirName = " "
         self.label.setText("Directory Selected: " + dirName)
         self.Deselect.setEnabled(False)
-    def file_open1(self):
-        dirName = QFileDialog.getExistingDirectory()
-        self.label.setText("Directory Selected: " + dirName)
-        self.Deselect_2.setEnabled(True)
-
-    def deselect1(self):
-        dirName = " "
-        self.label.setText("Directory Selected: " + dirName)
-        self.Deselect_2.setEnabled(False)
+    def CaptureDataForm(self):
+        self.window=QtWidgets.QPointCloudProject()
+        self.ui=Ui_MainWindow()
+        self.ui=setupUi(self.window)
+        PointCloudProject.hide()
+        self.window.show()
 
 
-
-        
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
@@ -217,4 +159,4 @@ if __name__ == "__main__":
     ui = Ui_PointCloudProject()
     ui.setupUi(PointCloudProject)
     PointCloudProject.show()
-    sys.exit(app.exec_())  
+    sys.exit(app.exec_())
