@@ -5,9 +5,9 @@ import sys
 import subprocess
 import time #Only for testing closing and reopening the window
 
-class MyDialog(QtWidgets.QDialog):
+class MyMenu(QtWidgets.QDialog):
     def __init__(self):
-        super(MyDialog, self).__init__()
+        super(MyMenu, self).__init__()
         self.ui = MainMenu()
         self.ui.setupUi(self)
         self.show()
@@ -27,6 +27,10 @@ class MyDialog(QtWidgets.QDialog):
         # do something
         time.sleep(2)
 
+        # self.objectname=Kamy'sDialog()
+        # test = self.objectname.exec_()
+        # exec_ is a blocking action. 
+
         # Re-open UI
         self.open()
 
@@ -37,7 +41,7 @@ class MyDialog(QtWidgets.QDialog):
     def dir_open(self):
         dirName = QFileDialog.getExistingDirectory()
         self.ui.DirText.setText("Directory Selected: " + dirName)
-        if (dirName != ""): 
+        if (dirName != ""): # i.e. they exit without selecting a directory
             self.ui.Reg.setEnabled(True) # Reg should be allowed only when a directory is selected
             self.ui.Deselect.setEnabled(True) # Deselect should be allowed only when a directory is selected
 
@@ -50,14 +54,16 @@ class MyDialog(QtWidgets.QDialog):
     # View Point Cloud - Requires opening a file
     def file_open1(self):
         fileName = QFileDialog.getOpenFileName()
-        # do something with file
+        # if (fileName != ""): # i.e. they exit without selecting a file
+            # do something with file
 
     # View Mesh - Requires opening a file
     def file_open2(self):
         fileName = QFileDialog.getOpenFileName()
-        # do something with file
+        # if (fileName != ""): # i.e. they exit without selecting a file
+            # do something with file
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
-    Dialog = MyDialog()
+    Menu = MyMenu()
     sys.exit(app.exec_())
