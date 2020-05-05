@@ -4,8 +4,19 @@ import os.path
 import sys
 import subprocess
 import time #Only for testing closing and reopening the window
+from test import trythis
 from updatedEx import MainMenu
 from CaptureDataEdited import Ui_CaptureData
+
+class MyRunner(QtCore.QRunnable):
+    def __init__(self, fn, *args, **kwargs):
+        super(MyRunner, self).__init__()
+        self.fn = fn
+        self.args = args
+        self.kwargs = kwargs
+
+    def run(self):
+        self.fn(*self.args, **self.kwargs)
 
 class MyMenu(QtWidgets.QDialog):
     def __init__(self):
@@ -14,6 +25,8 @@ class MyMenu(QtWidgets.QDialog):
         self.ui.setupUi(self)
         self.show()
         self.dirName = ""
+
+        self.threadpool = QtCore.QThreadPool()
 
         # Define button actions to functions 
         self.ui.CaptureData.clicked.connect(self.capture)
@@ -35,9 +48,11 @@ class MyMenu(QtWidgets.QDialog):
             self.ui.Reg.setEnabled(True)
             self.ui.Deselect.setEnabled(True) 
 
-            #call main(dirName)
+            self.runner = MyRunner(trythis, self.dirName)
+            self.threadpool.start(self.runner)
 
-        self.open()
+        self.threadpool.waitForDone()
+        self.show()
         
     def registration(self):
         # call manual reg
