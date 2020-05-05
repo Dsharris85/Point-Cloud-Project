@@ -4,7 +4,7 @@ from updatedEx import MainMenu
 import sys
 import subprocess
 import time #Only for testing closing and reopening the window
-from CaptureDataWidget import Ui_CaptureData
+from CaptureData import Ui_CaptureData
 
 class MyMenu(QtWidgets.QDialog):
     def __init__(self):
@@ -31,24 +31,30 @@ class MyMenu(QtWidgets.QDialog):
         # test = self.objectname.exec_()
         # exec_ is a blocking action.
         #connect the Capture Data interface with the main menu
-        self.window=QtWidgets.QMainWindow()
+        
+        self.CaptureDataForm=QtWidgets.QDialog()
         self.ui=Ui_CaptureData()
-        self.ui.setupUi(self.window)
+        self.ui.setupUi(CaptureDataForm)
         self.hide()
-        self.window.show()
+        self.CaptureData.show()
+        
         #open a file from an existing directory
-        self.ui.fromanexistingDirectory.clicked.connect(self.file_open3)
+        self.ui.LoadDir_3.clicked.connect(self.file_open3)
         #self.ui.Deselect.clicked.connect(self.deselect_2)
-        self.ui.backtomainmenu.clicked.connect(self.backtomenu)
+        self.ui.Mainmenu.clicked.connect(self.backtomenu)
         #opening by a typed directory 
         # self.ui.commandLinkButton.clicked.connect(self.?)
         # self.objectname=Kamy'sDialog()
         # test = self.objectname.exec_()
         # exec_ is a blocking action. 
-
+        
         # Re-open UI
      #  self.open()
      # Capture Data From an existing directory - Requires opening a file/folder?
+   
+        
+        
+    
     def file_open3(self):
         dirName = QFileDialog.getExistingDirectory()
         
@@ -56,8 +62,10 @@ class MyMenu(QtWidgets.QDialog):
        #def deselect_2(self):
         # update deselect_2 for deselecting in capturedatawidget
        # self.ui.Reg.setText("Hi")
+    
+
     def backtomenu(self):
-        self.window.hide()
+        self.dialog.hide()
         self.show()
         
     def registration(self):
