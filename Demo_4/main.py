@@ -30,17 +30,15 @@ if __name__ == "__main__":
         print("\nGive a new directory name... Exiting")
         exit() 
 
-    # imports
-    from capture_test import *
-    from view import *
-    from run_system import *
-
     print("dirName: {}".format(dirName))
 
-    main_capture(dirName) # for GUI, need to make new directory, give path here
+    from capture_test import *
+    #main_capture(dirName) # for GUI, need to make new directory, give path here
 
+    from run_system import *
     main_register_capture(dirName) # GUI: give path to dir made, or option to register from chosen folder?
             
+    from view import *
     main_view_cloud("{}/scene/integrated.ply".format(dirName)) # GUI: replace with a chosen .ply/.pcd file
     main_view_mesh("{}/scene/integrated.ply".format(dirName))  # GUI: replace with a chosen .ply/.pcd file
         

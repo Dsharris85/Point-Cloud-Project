@@ -4,15 +4,16 @@
 
 # examples/Python/ReconstructionSystem/run_system.py
 
-import json
+
 import time, datetime
 import sys
 from file import check_folder_structure
 sys.path.append(".")
 from initialize_config import initialize_config
+from updateJson import *
 
 def main_register_capture(dirName):
-
+    '''
     # need to tweak config file 
     with open("config/kinect_config.json", "r") as json_file:
         config = json.load(json_file)
@@ -23,13 +24,21 @@ def main_register_capture(dirName):
 
     tmp = config["path_dataset"] 
     config["path_dataset"] = dirName
+    '''
+    updateConfig(dirName)
+
 
     # save changes to file
-    with open("config/kinect_config.json", "w+") as json_file:
-        json_file.write(json.dumps(config))
+    #with open("config/kinect_config.json", "w+") as json_file:
+    #    json_file.write(json.dumps(config))
+
+    with open("config/kinect_config.json", "r") as json_file:
+        config = json.load(json_file)
 
     # will change 
     config['debug_mode'] = True
+
+    print("Updated .json with {}".format(config["path_dataset"]))
 
     print("====================================")
     print("Configuration")

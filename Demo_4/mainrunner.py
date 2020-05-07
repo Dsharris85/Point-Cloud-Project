@@ -51,14 +51,21 @@ class MyMenu(QtWidgets.QDialog):
             self.ui.Reg.setEnabled(True)
             self.ui.Deselect.setEnabled(True) 
 
-            self.runner = MyRunner(main_capture, self.dirName)
-            self.threadpool.start(self.runner)
-            self.threadpool.waitForDone()
             
+            #self.runner = MyRunner(main_capture, self.dirName)
+            #self.threadpool.start(self.runner)
+            #self.threadpool.waitForDone()
+            import threading
+            some_thread = threading.Thread(target=main_capture, args=[self.dirName])
+            some_thread.start()
+        
+            some_thread.join()
+
         self.show()
         
     def registration(self):
         self.hide()
+        print(self.dirName  )
         self.runner = MyRunner(main_register_capture, self.dirName)
         self.threadpool.start(self.runner)
 
@@ -83,7 +90,7 @@ class MyMenu(QtWidgets.QDialog):
         fileName = QFileDialog.getOpenFileName()
         if (fileName != ""): # file must be selected
             self.hide()
-            self.runner = MyRunner(main_view_cloud, fileName)
+            self.runner = MyRunner(main_view_cloud, fileName[0])
             self.threadpool.start(self.runner)
 
             self.threadpool.waitForDone()
@@ -93,7 +100,7 @@ class MyMenu(QtWidgets.QDialog):
         fileName = QFileDialog.getOpenFileName()
         if (fileName != ""): # file must be selected
             self.hide()
-            self.runner = MyRunner(main_view_mesh, fileName)
+            self.runner = MyRunner(main_view_mesh, fileName[0])
             self.threadpool.start(self.runner)
 
             self.threadpool.waitForDone()

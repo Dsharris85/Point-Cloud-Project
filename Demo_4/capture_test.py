@@ -7,8 +7,12 @@ import numpy as np
 import frame_convert
 import open3d as o3d
 
+from updateJson import *
+
 # global counter, counts how many images taken (for naming scheme)
 total_taken = 1
+
+print("test")
 
 def get_depth_registered():
     return freenect.sync_get_depth(format=freenect.DEPTH_REGISTERED)[0]
@@ -54,10 +58,19 @@ def save_all(d):
     print("Saved capture {} to {}!".format(total_taken, dirName))
 
 def main_capture(d):
+
+    updateConfig(d)
+
+    print("test - main capture")
+    cv2.startWindowThread()
     cv2.namedWindow('RGB')
+
+    print('hi')
     flag = True
     saving = 0
     
+    print("test - main capture2")
+
     while (flag):
         show(saving)
         if (saving != 0): 
