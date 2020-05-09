@@ -6,6 +6,7 @@ import threading
 # imports for layout
 from menulayout import MainMenu
 from popup import Ui_CaptureData
+from finishedcapture import *
 # imports for functionality
 from capture_test import *
 from view import *
@@ -39,9 +40,8 @@ class MyMenu(QtWidgets.QDialog):
             self.ui.Reg.setEnabled(True)
             self.ui.Deselect.setEnabled(True) 
 
-            thread = threading.Thread(target=main_capture, args=[self.dirName])
-            thread.start()
-            thread.join()
+            self.capturing = CaptureForm(self.dirName)
+            test = self.capturing.exec_() # Blocking action
             
         self.show()
         
