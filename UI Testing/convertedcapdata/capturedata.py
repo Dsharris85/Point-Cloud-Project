@@ -45,7 +45,7 @@ class Ui_CaptureForm(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.VideoFeed.sizePolicy().hasHeightForWidth())
         self.VideoFeed.setSizePolicy(sizePolicy)
-        self.VideoFeed.setMinimumSize(QtCore.QSize(300, 300))
+        self.VideoFeed.setMinimumSize(QtCore.QSize(255, 255))
         self.VideoFeed.setText("")
         self.VideoFeed.setObjectName("VideoFeed")
         self.verticalLayout_2.addWidget(self.VideoFeed)

@@ -37,7 +37,7 @@ class VideoThread(QtCore.QThread):
         #    img = np.array(get_video())
             img = cv2.imread('pikachu.PNG')
             img = QtGui.QImage(img.data, img.shape[1], img.shape[0], QtGui.QImage.Format_RGB888).rgbSwapped()
-            img = img.scaled(300, 300, QtCore.Qt.KeepAspectRatio)
+            img = img.scaled(255, 255, QtCore.Qt.KeepAspectRatio)
 
             self.update_video.emit(img)
 
