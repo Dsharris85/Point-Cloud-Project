@@ -1,6 +1,0 @@
-open3d==0.9.0.0
-python-pcl==0.3.0a1
-pyqtgraph==0.10.0
-freenect==0.0.0
-tqdm==4.42.1
-numpy==1.16.3
