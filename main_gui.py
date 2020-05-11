@@ -5,7 +5,7 @@ import sys
 import threading
 # imports for layout
 from menulayout import MainMenu
-from popup import Ui_CaptureData
+from popuplayout import Ui_CaptureData
 # imports for functionality
 from capture_test import *
 from view import *
